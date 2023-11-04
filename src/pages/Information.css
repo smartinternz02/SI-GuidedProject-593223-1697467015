@@ -1,0 +1,31 @@
+.InfoContainer {
+  background-color: #bfd7ea;
+}
+
+.InfoContent {
+  padding: 30px;
+}
+
+.IntroText {
+  padding: 20px;
+}
+
+.briefIntro,
+.historyMpox,
+.typesMpox {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.info {
+  padding-top: 20px !important;
+  padding-bottom: 0px !important;
+}
+
+.landscape
+{
+  width: fit-content !important;
+}

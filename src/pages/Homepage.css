@@ -1,0 +1,52 @@
+.App
+{
+    background-color: #bfd7ea;
+    height: 100dvh;
+    width: 100%;
+}
+
+.ProjectTitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ProjectDescription
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    font-size: 20px;
+}
+
+.DiagnosisNavigation
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    font-size: 20px;
+}
+
+.diagnoseButton
+{
+    width: 150px;
+    height: 55px;
+    border-radius: 15px;
+    background-color: #88b9e1;
+    transition: 0.3s all ease;
+}
+
+.diagnoseButton:hover
+{
+    background-color: rgb(56, 56, 243);
+    color: white;
+}
+
+

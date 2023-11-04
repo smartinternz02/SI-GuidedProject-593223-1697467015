@@ -1,0 +1,15 @@
+.footerContainer
+{
+    background-color: #88b9e1;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.emoji
+{
+    color: red;
+    font-size: 40px;
+}

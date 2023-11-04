@@ -1,0 +1,51 @@
+.diagnosisContent
+{
+    background-color: #bfd7ea;
+    height: 100vh;
+}
+
+.howto
+{
+    padding: 10px;
+}
+
+.uploadForm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.custom-file-upload {
+    background-color: #88b9e1;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: lightblue;
+    border: solid blue;
+  }
+
+  .UploadSpan
+  {
+    border: #0b3954 !important;
+  }
+
+  .previewImage
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
