@@ -8,7 +8,7 @@ app = Flask(_name_)
 CORS(app)
 
 # Load the pre-trained model
-model = load_model("../models/poxvisio.h5")
+model = load_model("./models/poxvisio.h5")
 
 # Define the labels for the binary classification
 labels = ["Monkey Pox", "Not Monkey Pox"]
