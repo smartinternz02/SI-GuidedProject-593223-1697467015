@@ -1,0 +1,30 @@
+.NavbarContainerClass
+{
+    background-color: #88b9e1;
+}
+    
+.NavbarContainer
+{
+    display: flex;
+    gap: 400px;
+}
+
+.NavbarLinks
+{
+    font-size: 18px;
+    transition: 0.2s all ease;
+}
+
+.NavbarLinks:hover
+{
+    text-decoration: underline;
+    font-size: 19px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.ReactLinks
+{
+    text-decoration: none;
+    color: #0b3954;
+}

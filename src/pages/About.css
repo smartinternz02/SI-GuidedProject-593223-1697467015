@@ -1,0 +1,58 @@
+.aboutContent,.projectOverview,.projectPurpose,.projectTechStack,.projectAcknowledgment
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+.aboutContent
+{
+    
+    padding: 30px;
+    gap: 30px;
+    background-color: #bfd7ea;
+    height: 100dvh;
+    width: 100%;
+}
+
+.projectOverviewContent,.projectPurposeContent,.TechStackContent,.projectAcknowledgmentContent
+{
+    display: flex;
+    /* border: solid red; */
+    gap: 120px;
+    padding: 20px;
+}
+
+.projectPurposeContent,.projectAcknowledgmentContent
+{
+    gap: 300px;
+}
+
+.text
+{
+    width: 60%;
+    font-size: 20px;
+}
+
+.heading1
+{
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(93, 93, 204);
+}
+
+.heading2
+{
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+    color: rgb(93, 93, 204);
+}
+
+
+.AboutImg
+{
+    height: 200px;
+    width: 200px;
+}
