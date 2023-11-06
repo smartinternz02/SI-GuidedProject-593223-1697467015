@@ -11,20 +11,29 @@ export default function Diagnosis() {
       setImage(file);
     }
   };
-  const monkeypoxInt = parseInt(data.monkeypox, 10);
-  const nonMonkeypoxInt = parseInt(data.non_monkeypox, 10);
-
-  const mon = monkeypoxInt.toFixed(2);
-  const nonmon= nonMonkeypoxInt.toFixed(2);
-  mon*=100;
-  nonmon*=100;
 
   const updateUI = (data) => {
     // You can update the UI with the prediction and confidence here
     // For example, display the prediction and confidence in a div with an id
+    let monkeypoxInt = Number(data.monkeypox);
+    let nonMonkeypoxInt = Number(data.non_monkeypox);
+    console.log(monkeypoxInt)
+    monkeypoxInt*=100;
+    nonMonkeypoxInt*=100;
+    let mon = monkeypoxInt.toFixed(2);
+    let nonmon= nonMonkeypoxInt.toFixed(2);
+
+  
     const resultDiv = document.getElementById('result');
-    resultDiv.textContent = MonkeyPox `Prediction: ${mon}, Not-MonkeyPox: ${nonmon}%`;
+    resultDiv.innerHTML =  `
+    <h5 id='mon'>
+      MonkeyPox: ${mon} %
+    </h5>
+    <h5 id = 'nonmon'>
+      Not-MonkeyPox: ${nonmon} %
+    </h5>`
   };
+
   function sendData() {
     const formData = new FormData();
     formData.append("image", image);
@@ -54,10 +63,7 @@ export default function Diagnosis() {
         alert("Please select an image to upload.");
       }
     };
-    
-    
 
-  
 
   return (
     <div>
@@ -79,32 +85,35 @@ export default function Diagnosis() {
         </div>
 
         <h2 style={{ textAlign: "center" }}>Upload a Skin Lesion Image</h2>
-        
-        <form onSubmit={(e) => { handleSubmit(e); sendData();}} className="uploadForm" id="image-upload-form" action="/get_first_pixel_color" method="POST" enctype="multipart/form-data">
-        <input
-          type="file"
-          accept=".jpg, .jpeg, .png" // Limit accepted file types
-          onChange={handleImageUpload}
-        />
-        <button type="submit">Upload Image</button>
-      </form>
-      <div id="result"></div>
-      
         {image && (
+          <div className="center">
           <div className="previewImage">
-            <h3 style={{ textAlign: "center" }}>Uploaded Image Preview:</h3>
+            <h3 style={{ textAlign: "center", fontSize: '20px', marginTop: '17px' }}>Uploaded Image Preview</h3>
             <img
               src={URL.createObjectURL(image)}
               alt="Uploaded Skin Lesion"
               style={{ height: '200px', width:'fitContent' }}
             />
+
+          </div>
+          <div id="result"></div>
           </div>
           
         )}
+        <form onSubmit={(e) => { handleSubmit(e); sendData(); }} className="uploadForm" id="image-upload-form" action="/get_first_pixel_color" method="POST" enctype="multipart/form-data">
+        <input
+          type="file"
+          accept=".jpg, .jpeg, .png" // Limit accepted file types
+          onChange={handleImageUpload}
+        />
+        <button type="submit" >Upload Image</button>
+      </form>
+
+      </div>
+        
 
         
       </div>
-    </div>
     
   );
   

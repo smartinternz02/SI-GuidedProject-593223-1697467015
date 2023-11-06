@@ -4,14 +4,11 @@ import cv2
 from keras.models import load_model
 from flask_cors import CORS
 
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)
 
 # Load the pre-trained model
-model = load_model("./models/poxvisio.h5")
-
-# Define the labels for the binary classification
-labels = ["Monkey Pox", "Not Monkey Pox"]
+model = load_model("models/poxvisio.h5")
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -32,5 +29,5 @@ def predict():
     
     return jsonify(response_data)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
