@@ -49,3 +49,28 @@
     justify-content: center;
   }
   
+  #result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  #result h5{
+    font-size: 30px !important; 
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .center{
+    display: flex;
+    justify-content: center;
+
+
+  }
+
+  .off{
+    display: none;
+  }

@@ -6,12 +6,10 @@
 }
 .aboutContent
 {
-    
     padding: 30px;
     gap: 30px;
     background-color: #bfd7ea;
-    height: 100dvh;
-    width: 100%;
+    height: fit-content;
 }
 
 .projectOverviewContent,.projectPurposeContent,.TechStackContent,.projectAcknowledgmentContent
