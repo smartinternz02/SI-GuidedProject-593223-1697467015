@@ -37,8 +37,10 @@ export default function Diagnosis() {
   function sendData() {
     const formData = new FormData();
     formData.append("image", image);
+    
+    // USE http://127.0.0.1:5000/predict if running flask on local host
 
-    fetch('http://localhost:5000/predict', {
+    fetch('https://pox.azurewebsites.net/predict', {
       method: 'POST',
       body: formData,
     })
